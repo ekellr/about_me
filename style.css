@@ -9,17 +9,18 @@ header{
 }
 
 /*select more specific html elements*/
-header h2{
+h1{
   /*color: red;*/
-  background-color: black;
+  background-color: red;
 }
 
 /*select a class*/
-.black-background{
-  background-color: black;
+.bullet{
+  background-color: green;
+  font-size: 24pt;
 }
 
 /*select an id*/
-#special-background{
-  background-color: black;
+#desc{
+  background-color: violet;
 }
