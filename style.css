@@ -1,0 +1,25 @@
+/*css's mission in life: figure out which elements to select, and then tell those elements to look a certain way.
+it does this by having "selectors" (ways to select) and "properties" (things it can set, like font or text color or background color).
+one of my favorite css references (to look up selectors and properties): https://css-tricks.com/almanac/
+when two styles conflict, css will use whatever style is more specific. for example: if the h2s have been styled to have green text, but the header h2 is told to use red text, then that h2 in the header will be red - because header h2 is more specific than just h2.
+Some properties will be inherited; the properties that can be inherited are mostly text-related (font, color, etc.). For example, if you tell the header to have blue text, than all child elements of the header (like the h2) will have blue text, unless you override it with something more specific.*/
+
+header{
+  color: blue;
+}
+
+/*select more specific html elements*/
+header h2{
+  /*color: red;*/
+  background-color: black;
+}
+
+/*select a class*/
+.black-background{
+  background-color: black;
+}
+
+/*select an id*/
+#special-background{
+  background-color: black;
+}
