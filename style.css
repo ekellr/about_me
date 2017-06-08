@@ -8,6 +8,14 @@ Some properties will be inherited; the properties that can be inherited are most
   color: violet;
 }
 
+header {
+  width: 200px;
+  border: 10px solid orange;
+  padding: 50px;
+  /*margin: 100px;*/
+  margin: 0 auto;
+}
+
 .colorHead{
   color: blue;
 }

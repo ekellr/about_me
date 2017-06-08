@@ -94,7 +94,7 @@ do{
       console.log('The user answer is too high.');
     }
     else{
-      alert('You got it right!!!')
+      alert('You got it right!!!');
       console.log('The user answer is right.');
       userPoints++;
       break;
@@ -105,40 +105,29 @@ do{
 
 while(retryCount < 5);
 
-var foodsDisike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
-alert('Hi ' + user + '! Let\'s play another game:');
+//question #7
+/*var foodsDislike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
 
-var answer7 = prompt('Can you guess what food I avoid as much as I can?';
+alert('Hi ' + user + '! Let\'s play another game:');
+var isCorrect = false;
+
+var answer7 = prompt('Can you guess what food I try to avoid as much as I can?').toLowerCase();
 console.log(answer7);
 
-
-
-for (var i = 0; i < 5; i++) {
-  console.log(foodsILike[i]);
+for (var i = 0; i < foodsDislike.length; i++) {
+  if(answer7 == foodsDislike [i]){
+    console.log('The user \'s guess was ' + foodsDislike);
+    userPoints++;
+    do{
+      alert('You answer is' + foodsDislike[i]);
+    }
+    isCorrect = true;
+    break;
+  }
 }
-
-foodsILike.push('swiss chard');
-console.log('The user \'s guess was ' + foodsILike);
-
-// pop removes an element from the end of the array
-var veggie = foodsILike.pop();
-console.log('The user \'s guess was ' + foodsILike);
-
-// unshift adds elements to the front of the array
-foodsILike.unshift('spinach');
-console.log(foodsILike);
-
-foodsILike.shift();
-console.log(foodsILike)
-
-// indexOf tells you the index of an element in the array; returns -1 if not found
-var index = foodsILike.indexOf('popcorn');
-console.log(index);
-
-} else {
-  // if it's not correct, tell them to try again
-  alert('Wrong! try again');
+if (isCorrect){
+  alert('You got it right!!!!');
 }
 
 alert('you have ' + userPoints + ' points.');
-console.log('The user \'s total points are ' + userPoints);
+console.log('The user \'s total points are ' + userPoints);*/
