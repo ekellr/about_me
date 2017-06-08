@@ -4,23 +4,22 @@ one of my favorite css references (to look up selectors and properties): https:/
 when two styles conflict, css will use whatever style is more specific. for example: if the h2s have been styled to have green text, but the header h2 is told to use red text, then that h2 in the header will be red - because header h2 is more specific than just h2.
 Some properties will be inherited; the properties that can be inherited are mostly text-related (font, color, etc.). For example, if you tell the header to have blue text, than all child elements of the header (like the h2) will have blue text, unless you override it with something more specific.*/
 
-header{
-  color: blue;
+.color{
+  color: violet;
 }
 
+.colorHead{
+  color: blue;
+}
 /*select more specific html elements*/
 h1{
   /*color: red;*/
-  background-color: red;
+  background-color: none;
+  font-family: serif;
 }
 
 /*select a class*/
 .bullet{
-  background-color: green;
-  font-size: 24pt;
-}
-
-/*select an id*/
-#desc{
-  background-color: violet;
+  font-family: fantasy;
+  font-size: 16pt;
 }

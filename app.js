@@ -1,119 +1,80 @@
 'use strict';
-
-// This method returns a boolean value indicating whether or not the result
-// is a yes answer.
-var isYesAnswer = function(result)
-{
-  var lowerResult = result.toLowerCase();
-  var isYes = false;
-  if (lowerResult == 'y' || lowerResult == 'yes') {
-    isYes = true;
-  }
-
-  console.log('Answer was ' + (isYes ? 'yes' : 'no'));
-  return isYes;
-};
+var userPoints = 0;
+var myName = 'Elaine';
 
 
+alert('Welcome to my guessing game! My name is ' + myName + '!');
+console.log('Welcome message');
 
-// This variable will hold the list of answers to the questions we ask. Each
-// value will be a boolean (true or false).
-var answers = [];
-
-// This is the list of possible animals we can guess.  There are 32
-// possible animals.
-var guesses = [
-  'Cat',
-  'Dog',
-  'Hedgehog',
-  'Buffalo',
-  'Possum',
-  'Bird',
-  'Fox',
-  'Horse',
-  'Eagle',
-  'Chicken',
-  'Worm',
-  'Lion',
-  'Bear',
-  'Pig',
-  'Squirrel',
-  'Wolf',
-  'Whale',
-  'Fish',
-  'Crab',
-  'Sponge',
-  'Squid',
-  'Oyster',
-  'Sheep',
-  'Goat',
-  'Mouse',
-  'Rat',
-  'Cow',
-  'Monkey',
-  'Deer',
-  'Elk',
-  'Gazelle',
-  'Giraffe',
-  'Elephant',
-  'Cricket',
-];
-
-alert('Welcome to the animal guessing game!!!!');
-
-var user = prompt('Welcome to the Animal Guessing Game.  You think of an animal and I\'ll guess what it is after asking you 5 simple questions.\n\nWhat is your name?');
+var user = prompt('What is your name?');
 console.log('The user\'s name is ' + user);
 
-var wantsToPlayAgain = false;
-do {
-  alert('Hi ' + user + '! My name is Elaine. Let\'s play!!!\n\nPlease think of an animal.\n\nClick OK when you\'re ready to play');
 
-  var answer = prompt('Does it have fur?', 'type yes or no');
-  answers.push(isYesAnswer(answer));
+var answer1 = prompt('Is ' + myName + '\'s favorite animal a bird?', 'type yes or no').toLowerCase();
+console.log('The user answer is ' + answer1);
 
-  answer = prompt('Do people keep it as a pet?', 'type yes or no');
-  answers.push(isYesAnswer(answer));
 
-  answer = prompt('Can you find it in Washington state?', 'type yes or no');
-  answers.push(isYesAnswer(answer));
+if (answer1 === 'yes' || answer1 === 'y') {
+  // if it's correct, give them a point
+  alert('Wrong! try again');
+} else {
+  // if it's not correct, tell them to try again
+  userPoints++;
+}
 
-  answer = prompt('Is it an herbivore?', 'type yes or no');
-  answers.push(isYesAnswer(answer));
+alert('you have ' + userPoints + ' points.');
 
-  answer = prompt('Is it bigger than a breadbox?', 'type yes or no');
-  answers.push(isYesAnswer(answer));
+var answer2 = prompt('Does ' + myName + ' have 7 chickens?').toLowerCase();
+console.log('The user answer is ' + answer2);
 
-  // Based on the answers the user has provided, guess their animal.
-  var index = 0;
-  var message = 'The user answered ';
-  for (var i = 0; i < answers.length; i++)
-  {
-    if (i > 0)
-    {
-      message += ', ';
-    }
+if (answer2 === 'yes' || answer2 === 'y') {
+  // if it's correct, give them a point
+  userPoints++;
+} else {
+  // if it's not correct, tell them to try again
+  alert('Wrong! try again');
+}
 
-    message += (answers[i] ? 'yes' : 'no');
-    var answerValue = answers[i] == true ? 1 : 0;
-    index += answerValue * Math.pow(2, i);
-  }
+alert('you have ' + userPoints + ' points.');
+var answer3 = prompt('Is Matrix ' + myName + '\'s favorite movie?', 'type yes or no').toLowerCase();
+console.log('The user answer is ' + answer3);
 
-  console.log(message + ' which results in a score of ' + index);
+if (answer3 === 'yes' || answer3 === 'y') {
+  // if it's correct, give them a point
+  alert('Wrong! try again');
 
-  // Look up our guess
-  var guess = guesses[index];
+} else {
+  // if it's not correct, tell them to try again
+  userPoints++;
+}
 
-  answer = prompt('Is it a ' + guess + '?', 'type yes or no');
-  var gotItRight = isYesAnswer(answer);
-  if (gotItRight) {
-    answer = prompt('Woohoo! I got it right!  \n\nWant to play again?', 'type yes or no');
-  }
-  else {
-    answer = prompt('Oh darn!  Better luck next time I guess.\n\nWant to play again?', 'type yes or no');
-  }
+alert('you have ' + userPoints + ' points.');
+var answer4 = prompt('Is ' + myName + '\'s favorite food Paleo Pizza?', 'type yes or no').toLowerCase();
+console.log('The user answer is ' + answer4);
 
-  wantsToPlayAgain = isYesAnswer(answer);
-  console.log('The user ' + (wantsToPlayAgain ? 'wants' : 'does not want') + ' to play again');
-} while (wantsToPlayAgain);
+if (answer4 === 'yes' || answer4 === 'y') {
+  // if it's correct, give them a point
+  userPoints++;
+} else {
+  // if it's not correct, tell them to try again
+  alert('Wrong! try again');
+}
 
-alert('Thanks for playing. :)');
+alert('you have ' + userPoints + ' points.');
+var answer5 = prompt('Is ' + myName + '\'s favorite car brand Audi?', 'type yes or no').toLowerCase();
+console.log('The user answer is ' + answer5);;
+
+if (answer5 === 'yes' || answer5 === 'y') {
+  // if it's correct, give them a point
+  userPoints++;
+} else {
+  // if it's not correct, tell them to try again
+  alert('Wrong! Thanks for playing with me!!!!');
+}
+
+alert('You have ' + userPoints + ' points.');
+console.log('The user has ' + userPoints + ' points!!!');
+
+//---------------------------------------------------------------
+// This method returns a boolean value indicating whether or not the result
+// is a yes answer.
