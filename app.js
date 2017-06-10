@@ -1,6 +1,7 @@
 'use strict';
 var userPoints = 0;
 var myName = 'Elaine';
+var movieTimes = 100;
 
 
 alert('Welcome to my guessing game! My name is ' + myName + '!');
@@ -75,6 +76,54 @@ if (answer5 === 'yes' || answer5 === 'y') {
 alert('You have ' + userPoints + ' points.');
 console.log('The user has ' + userPoints + ' points!!!');
 
-//---------------------------------------------------------------
-// This method returns a boolean value indicating whether or not the result
-// is a yes answer.
+var answer6;
+var retryCount = 0;
+
+do{
+  answer6 = prompt('How many time did I watch the movie Aliens?');
+  console.log('The user answer is ' + answer6);
+
+  if(answer6 < movieTimes) {
+    alert('Your guess is too low! Please try again.');
+    console.log('The user answer is too low.');
+  }
+  else {
+    if(answer6 > movieTimes) {
+      alert('Your guess is too high! Please try again.');
+      console.log('The user answer is too high.');
+    }
+    else{
+      alert('You got it right!!!');
+      console.log('The user answer is right.');
+      userPoints++;
+      break;
+    }
+  }
+  retryCount++;
+}
+
+while(retryCount < 5);
+
+//question #7
+var foodsDislike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
+
+alert('Hi ' + user + '! Let\'s play another game:');
+var isCorrect = false;
+
+var answer7 = prompt('Can you guess what food I try to avoid as much as I can?').toLowerCase();
+console.log(answer7);
+
+for (var i = 0; i < foodsDislike.length; i++) {
+  if(answer7 == foodsDislike [i]){
+    console.log('The user \'s guess was ' + foodsDislike);
+    userPoints++;
+    isCorrect = true;
+    break;
+  }
+}
+if (isCorrect){
+  alert('You got it right!!!!');
+}
+
+alert('you have ' + userPoints + ' points.');
+console.log('The user \'s total points are ' + userPoints);
