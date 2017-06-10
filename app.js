@@ -2,6 +2,7 @@
 var userPoints = 0;
 var myName = 'Elaine';
 var movieTimes = 100;
+var numberOfQuestions = 7;
 
 
 alert('Welcome to my guessing game! My name is ' + myName + '!');
@@ -105,7 +106,7 @@ do{
 while(retryCount < 5);
 
 //question #7
-var foodsDislike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
+/*var foodsDislike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
 
 alert('Hi ' + user + '! Let\'s play another game:');
 var isCorrect = false;
@@ -117,6 +118,9 @@ for (var i = 0; i < foodsDislike.length; i++) {
   if(answer7 == foodsDislike [i]){
     console.log('The user \'s guess was ' + foodsDislike);
     userPoints++;
+    do{
+      alert('You answer is' + foodsDislike[i]);
+    }
     isCorrect = true;
     break;
   }
@@ -126,4 +130,4 @@ if (isCorrect){
 }
 
 alert('you have ' + userPoints + ' points.');
-console.log('The user \'s total points are ' + userPoints);
+console.log('The user \'s total points are ' + userPoints);*/

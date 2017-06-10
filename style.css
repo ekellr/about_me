@@ -1,3 +1,6 @@
+.color{
+  color: violet;
+}
 
 header {
   width: 500px;
@@ -7,10 +10,13 @@ header {
   font-family: cursive;
   text-align: center;
   background-color: CCFFFF;
-  color: #0066FF;
+  color: #0066;
 
 }
 
+.colorHead {
+  color: blue;
+}
 
 /*select more specific html elements*/
 h1 {
@@ -20,5 +26,4 @@ h1 {
 .bullet {
   font-family: fantasy;
   font-size: 16pt;
-  color: blue;
 }
