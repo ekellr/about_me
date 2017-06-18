@@ -49,6 +49,7 @@ alert('Welcome to my guessing game! My name is ' + myName + '!');
 console.log('Welcome message');
 
 var user = prompt('What is your name?');
+alert('Welcome ' + user);
 console.log('The user\'s name is ' + user);
 
 var answer1 = prompt('Is ' + myName + '\'s favorite animal a bird?', 'type yes or no').toLowerCase();
@@ -56,33 +57,33 @@ console.log('The user answer is ' + answer1);
 
 userPoints += isNoAnswer(answer1);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 
 var answer2 = prompt('Does ' + myName + ' have 7 chickens?').toLowerCase();
 console.log('The user answer is ' + answer2);
 
 userPoints += isYesAnswer(answer2);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 var answer3 = prompt('Is Matrix ' + myName + '\'s favorite movie?', 'type yes or no').toLowerCase();
 console.log('The user answer is ' + answer3);
 
 userPoints += isNoAnswer(answer3);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 var answer4 = prompt('Is ' + myName + '\'s favorite food Paleo Pizza?', 'type yes or no').toLowerCase();
 console.log('The user answer is ' + answer4);
 
 userPoints += isYesAnswer(answer4);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 var answer5 = prompt('Is ' + myName + '\'s favorite car brand Audi?', 'type yes or no').toLowerCase();
 console.log('The user answer is ' + answer5);;
 
 userPoints += isYesAnswer(answer5);
 
 
-alert('You have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 console.log('The user has ' + userPoints + ' points!!!');
 
 var answer6;
@@ -99,15 +100,22 @@ do{
 
   retryCount++;
 }
-while(retryCount < 3 && pointsEarned != 1);
+while(retryCount < 4 && pointsEarned != 1);
 userPoints += pointsEarned;
 
+if (pointsEarned != 0)
+{
+  alert(user + ', you have ' + userPoints + ' points.');
+  console.log('The user has ' + userPoints + ' points!!!');
+}
 //-----------------------------------------------------------------------
 //question #7
 var foodsDislike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
 
 alert('Hi ' + user + '! Let\'s play another game:');
 var isCorrect = false;
+alert('retry count is ' + retryCount);
+retryCount = 0;
 
 do{
   var answer7 = prompt('Can you guess what food I try to avoid as much as I can?').toLowerCase();
@@ -121,14 +129,20 @@ do{
       break;
     }
   }
+
   retryCount++;
+  if (isCorrect){
+    alert(user + ', you got it right!!!!');
+  }
+  else{
+    var message = user + ', you got it wrong.';
+    if(retryCount < 6){
+      message += ' Please, try again!';
+    }
+    alert(message);
+  }
+} while(isCorrect == false && retryCount < 6);
 
-} while(isCorrect == false && retryCount < 7);
 
-if (isCorrect){
-  alert('You got it right!!!!');
-}
-
-
-alert('you have ' + userPoints + ' points.');
-console.log('The user \'s total points are ' + userPoints);
+alert(user + ', you have ' + userPoints + ' points.');
+console.log('The user has ' + userPoints + ' points!!!');
