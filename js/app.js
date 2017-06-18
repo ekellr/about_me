@@ -49,6 +49,7 @@ alert('Welcome to my guessing game! My name is ' + myName + '!');
 console.log('Welcome message');
 
 var user = prompt('What is your name?');
+alert('Welcome ' + user);
 console.log('The user\'s name is ' + user);
 
 var answer1 = prompt('Is ' + myName + '\'s favorite animal a bird?', 'type yes or no').toLowerCase();
@@ -56,33 +57,32 @@ console.log('The user answer is ' + answer1);
 
 userPoints += isNoAnswer(answer1);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 
 var answer2 = prompt('Does ' + myName + ' have 7 chickens?').toLowerCase();
 console.log('The user answer is ' + answer2);
 
 userPoints += isYesAnswer(answer2);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 var answer3 = prompt('Is Matrix ' + myName + '\'s favorite movie?', 'type yes or no').toLowerCase();
 console.log('The user answer is ' + answer3);
 
 userPoints += isNoAnswer(answer3);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 var answer4 = prompt('Is ' + myName + '\'s favorite food Paleo Pizza?', 'type yes or no').toLowerCase();
 console.log('The user answer is ' + answer4);
 
 userPoints += isYesAnswer(answer4);
 
-alert('you have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 var answer5 = prompt('Is ' + myName + '\'s favorite car brand Audi?', 'type yes or no').toLowerCase();
 console.log('The user answer is ' + answer5);;
 
 userPoints += isYesAnswer(answer5);
 
-
-alert('You have ' + userPoints + ' points.');
+alert(user + ', you have ' + userPoints + ' points.');
 console.log('The user has ' + userPoints + ' points!!!');
 
 var answer6;
