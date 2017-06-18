@@ -111,10 +111,10 @@ if (pointsEarned != 0)
 //-----------------------------------------------------------------------
 //question #7
 var foodsDislike = ['MSG', 'wheat', 'canola oil', 'soy', 'simple carbs'];
+var rightAnswersMessage = 'Here are all the foods I dislike: ' + foodsDislike;
 
 alert('Hi ' + user + '! Let\'s play another game:');
 var isCorrect = false;
-alert('retry count is ' + retryCount);
 retryCount = 0;
 
 do{
@@ -122,7 +122,7 @@ do{
   console.log(answer7);
 
   for (var i = 0; i < foodsDislike.length; i++) {
-    if(answer7 == foodsDislike [i]){
+    if(answer7 == foodsDislike [i].toLowerCase()){
       console.log('The user \'s guess was ' + foodsDislike);
       userPoints++;
       isCorrect = true;
@@ -131,18 +131,22 @@ do{
   }
 
   retryCount++;
+
+  // Give feedback to the users
   if (isCorrect){
-    alert(user + ', you got it right!!!!');
+    alert(user + ', you got it right!!!! ' + rightAnswersMessage);
   }
   else{
     var message = user + ', you got it wrong.';
-    if(retryCount < 6){
+    if (retryCount < 6){
       message += ' Please, try again!';
+    }
+    else{
+      message += rightAnswersMessage;
     }
     alert(message);
   }
 } while(isCorrect == false && retryCount < 6);
-
 
 alert(user + ', you have ' + userPoints + ' points.');
 console.log('The user has ' + userPoints + ' points!!!');
