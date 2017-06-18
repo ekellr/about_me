@@ -27,20 +27,21 @@ function isNoAnswer(answer){
 //function for question #6
 function examineGuess(guess, rightAnswer){
 
-  if(guess < rightAnswer) {
+  if(isNaN(guess)){
+    alert('Next time, please enter a number.');
+  }
+  else if(guess < rightAnswer) {
     alert('Your guess is too low! Please try again.');
     console.log('The user answer is too low.');
   }
-  else {
-    if(guess > rightAnswer) {
-      alert('Your guess is too high! Please try again.');
-      console.log('The user answer is too high.');
-    }
-    else{
-      alert('You got it right!!!');
-      console.log('The user answer is right.');
-      return 1;
-    }
+  else if(guess > rightAnswer) {
+    alert('Your guess is too high! Please try again.');
+    console.log('The user answer is too high.');
+  }
+  else{
+    alert('You got it right!!!');
+    console.log('The user answer is right.');
+    return 1;
   }
   return 0;
 }
